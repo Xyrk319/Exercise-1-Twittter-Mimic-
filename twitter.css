@@ -1,0 +1,23 @@
+#foot{
+    bottom: 0;
+    position: fixed;
+    width: 100%
+}
+
+#twtbutton{
+    position:fixed;
+    top:82%;
+    left: 78%;
+    border-radius: 100%;
+    padding: 15px;
+}
+
+.container{
+    background: dark;
+    height: 100%;
+    width: 100%;
+}
+
+#profilebutton{
+    border: none;
+}
