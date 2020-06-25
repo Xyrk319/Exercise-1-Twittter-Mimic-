@@ -21,3 +21,81 @@
 #profilebutton{
     border: none;
 }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #14171A;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 0px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav h4{
+    padding-top: 10px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top:  0;
+  right: 25px;
+  font-size: 32px;
+  margin-left: 50px;
+}
+
+#accountinfo{
+    border-bottom-style: solid;
+    border-bottom-color: lightcyan;
+    border-bottom-width: thin;
+}
+
+#plusSign{
+    position: absolute;
+    right: 25px;
+    border-radius: 50%;
+    border-color:#4CAF50;
+    padding:0.2em;
+}
+
+#navnav{
+    list-style: none;
+    padding-left: 0px;
+}
+
+#navnav li{
+    margin:1.4em;
+    margin-left: 0;
+}
+
+#sidenavNavbar{
+    padding-top: 0.8em;
+}
+
+#profileName{
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+    font-size: 23px;
+}
+
+small.text-muted{
+    font-size:15px
+}
+#twtfeed{
+    padding:0;
+}
+
+#tweet{
+margin: 0;    
+}

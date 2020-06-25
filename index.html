@@ -16,28 +16,56 @@
     <header>        
         <nav class="navbar navbar-expand-xs navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#profile"  id="profilebutton">
+                <button class="navbar-toggler" type="button"    onclick="openNav()" id="profilebutton">
                     <img src="profile_pic.jpeg" width="30" height="30" class="d-inline-block align-left rounded-circle" alt="">
                 </button>
                 Home
             </a>
-            <div class="collapse navbar-collapse" id="profile">
-                <div class="bg-dark p-4">
-                    <ul>
-                        <li><a href="#"><img src="svgexport-10.png"></a></li>
-                        <li><a href="#"><img src="svgexport-10.png"></a></li>
-                        <li><a href="#"><img src="svgexport-10.png"></a></li>
-                        <li><a href="#"><img src="svgexport-10.png"></a></li>
-                        <li><a href="#"><img src="svgexport-10.png"></a></li>
-                    </ul>
-                </div>  
-              </div>
-            <a><img src="svgexport-6.png" width="30" class="align-right"></a>
+            <a><img src="svgexport-20.png" width="30" class="align-right"></a>
         </nav>
     </header>
-    
+    <div id="mySidenav" class="sidenav bg-dark">
+        <nav class="navbar navbar-expand-xs navbar-dark bg-dark" id="accountinfo">
+            <h4 class="text-white">Account Info</h4>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="svgexport-6.png"></a>
+        </nav>
+        <div class="container" id="sidenavNavbar">
+            <img src="profile_pic.jpeg" width="40" class="rounded-circle">
+            <button type="button" class="btn btn-success bg-dark" id="plusSign" ><img src="svgexport-7.png" ></button>
+            <p class="text-light" id="profileName"> Profile Name</p>
+            <p class="text-light text-muted" id="profileAddress">@ProfileAddress</p>
+            <p class="text-light d-inline block">0 <small class="text-muted" style="padding-right: 3em">Following</small> 0 <small class="text-muted">Followers</small></p>
+            <ul id="navnav">
+                <li class="text-light"><img src="svgexport-8.png">  Profile</li>
+                <li class="text-light"><img src="svgexport-9.png">  Lists</li>
+                <li class="text-light"><img src="svgexport-10.png">  Topics</li>
+                <li class="text-light"><img src="svgexport-11.png">  Bookmarks</li>
+                <li class="text-light"><img src="svgexport-12.png">  Moments</li>
+            </ul>
+        
+        </div>
+        
+        
+    </div>
+
     <body>
         <button type="button" class="btn btn-success" id="twtbutton" ><img src="svgexport-1.png" ></button>
+        <div class="container-fluid bg-dark" id="twtfeed">
+            <div id="tweet" class="container">
+                <div id="profilePicTwt d-inline-flex"> <img src="profile_pic.jpeg" width="40" class="rounded-circle"></div>
+                <div id="twtContent">Profile Name @ProfileAddress June 25, 2020 <img src="svgexport-23.png">
+                <p class="text-white">Hello World!</p>
+                    <div id="twtBottomNav" class="navbar">
+                        <img src="svgexport-24.png">
+                        <img src="svgexport-25.png">
+                        <img src="svgexport-26.png">
+                        <img src="svgexport-27.png">
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
     </body>
     
     <footer id="foot">
@@ -49,6 +77,14 @@
         </nav>
     </footer>
         
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
 
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 </html>
