@@ -1,28 +1,25 @@
+/*Mobile*/
+
 #foot{
     bottom: 0;
     position: fixed;
     width: 100%
 }
 
-#twtbutton{
+#twtbutton{ /* the tweet button in mobile that opens a panel but here it doesnt*/
     position:fixed;
     top:82%;
     left: 78%;
     border-radius: 100%;
     padding: 15px;
+    z-index: 2;
 }
 
-.container{
-    background: dark;
-    height: 100%;
-    width: 100%;
-}
-
-#profilebutton{
+#profilebutton{ /*for the profile pic that acts as a button for the navbar*/
     border: none;
 }
 
-.sidenav {
+.sidenav { /*for the sidenavigation window in the mobile version*/
   height: 100%;
   width: 0;
   position: fixed;
@@ -35,14 +32,6 @@
   padding-top: 0px;
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
 .sidenav h4{
     padding-top: 10px;
 }
@@ -55,13 +44,13 @@
   margin-left: 50px;
 }
 
-#accountinfo{
+#accountinfo{ /*for the "Account Info" in the side nav bar*/
     border-bottom-style: solid;
     border-bottom-color: lightcyan;
     border-bottom-width: thin;
 }
 
-#plusSign{
+#plusSign{ /*for the plus sign in the side nav bar*/
     position: absolute;
     right: 25px;
     border-radius: 50%;
@@ -69,7 +58,7 @@
     padding:0.2em;
 }
 
-#navnav{
+#navnav{ /*navnav class is for the profile lists topics bookmarks and moments in the sidenavigation bar */
     list-style: none;
     padding-left: 0px;
 }
@@ -89,23 +78,21 @@
     font-size: 23px;
 }
 
-small.text-muted{
-    font-size:15px
-}
-#twtfeed{
+#twtfeed{ /*CSS for the twt feed on mobile*/
     padding:0;
     padding-top:1em;
 }
 
-#tweet{
+#tweet{ /* I create a flexbox for the profile picture side and the twt contents*/
     margin: 0;    
     display: flex;
     border-bottom-style: solid;
     border-bottom-width: 0.001em;
     border-bottom-color: #D3D3D3;
+    position: relative;
 }
 
-#profilePicTwt{
+#profilePicTwt{ 
     flex:1;
     padding-top: 10px
 }
@@ -114,27 +101,20 @@ small.text-muted{
     flex:4
 }
 
-#twtProfAddress{
+#twtProfAddress{ /*for the profile address IN TWT*/
     text-decoration: none; 
     color: #A9A9A9; 
-    
+    font-size:15px;
 }
 
-#profileName{
+#profileName{ /*for the profile name in twt*/
     font-size:18px;
     text-decoration: none;
     color:white;
-    
 }
 
 #twtText{
     font-size:17px;
-}
-
-#sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
 
 body{
@@ -148,6 +128,111 @@ body{
     z-index: 1;
 }
 
-@media screen and (min-width: 64.063em){
-    
+.desktop{
+     display: none;
+}
+
+/*Desktop CSS*/
+@media only screen and (min-width: 64.063em){ 
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: block;
+    }
+    #desktopTopNavbar{
+        position: fixed;
+        display: flex;
+        top:0;
+    }
+    #leftNav{ /*this is actually the left most column in the navbar of desktop version*/
+        flex:2;
+        padding-left: 40px;
+        padding-right:0px;
+    }
+    #middleNav{ /*middle column of the navbar which has the twt feed under it*/
+        flex:5;
+        border-style:solid;
+        border-top:none;
+        border-bottom-width: thin;
+        border-left-width:thin;
+        border-right-width:thin;
+        border-color:azure;
+        height:50px;
+        margin-left:0px;
+    }
+    #rightNav{ /*rightmost column of the navbar*/
+        flex:3;
+    }
+     body{
+        display:flex;
+        
+    }
+    #twtfeed{ /*css for twt feed in desktop version*/
+        padding:0;
+        padding-top:1em;
+        flex: 5;
+        border-style: solid;
+        border-width: thin;
+        border-color: antiquewhite;
+        border-bottom: none;
+        margin-left: 15px;
+    }
+   
+    #navbarLeft{ /*the left most column which contains the profile bookmarks lists topics*/
+       flex:2; 
+    }
+    #underSearchBar{ /*right most column*/
+        flex:3;
+    }
+    #navnav button{
+        border-radius: 30%;
+        border-width: thin;
+        margin: 0.1em;
+        padding-left:40px;
+        display:block;
+        
+    }
+    #navbarLeft .btn{ /*side nav bar in the desktop version*/
+        padding:0px;
+        padding-left: 40px;
+    }
+    #twtBox{ /*tweeting area*/
+        display:flex;
+        height: 150px;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        border-bottom-color: antiquewhite;
+    }
+    #profileTwtBox{ /*profile pic in the tweeting box*/
+        padding-top: 10px;
+        flex:1;
+    }
+    #twtArea{ /*this is for the text area */
+        flex:7;
+    }
+    #twtTextBox{ /*the entirety of the tweeting area where the text box for tweeting is*/
+        border:none;
+        height:50%;
+    }
+    #Trending{ /*css for the trending table*/
+        margin-top: 30px;
+        border-radius: 10%;
+        border-color: antiquewhite;
+    }
+    #whoToFollow{ /*css for the trending table*/
+        border-radius: 10%;
+        border-color: antiquewhite;
+    }
+    table{
+        position:relative;
+    }
+    #whoToFollow tr .btn{ /*this is for the follow button*/
+        position:absolute;
+        right:20px;
+    }
+    #whoToFollow tr img{ /*to move the text to the right of the profile pic in the Who to Follow*/
+        margin-right: 10px;
+    }
+   
 }
